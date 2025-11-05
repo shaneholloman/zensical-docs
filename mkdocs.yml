@@ -53,6 +53,7 @@ theme:
     - navigation.sections
     - navigation.tabs
     - navigation.top
+    - search.highlight
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
