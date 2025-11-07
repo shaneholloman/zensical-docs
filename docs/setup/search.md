@@ -8,7 +8,8 @@ tags:
 # Search
 
 Zensical offers seamless client-side search functionality, eliminating the need
-to integrate third-party services that may not comply with privacy regulations. Additionally, the search works [offline], enabling you to distribute
+to integrate third-party services that may not comply with privacy regulations.
+Additionally, the search works [offline], enabling you to distribute
 documentation as a download.
 
 !!! info "We're interested in your feedback"
@@ -16,6 +17,15 @@ documentation as a download.
     Zensical ships a completely new search engine that we've written from
     scratch and we're eager to hear your feedback! We're continuously working
     on it, and will release it as a [standalone Open Source project] in 2026.
+
+!!! warning "Search is currently only available in English"
+
+    At the moment, the search interface is not localized, since it's an entirely
+    new implementation. Thus, it does not make sense for us to carry over the
+    search localization from Material for MkDocs, as its tightly coupled to
+    the old search implementation, and we're still changing too much.
+
+    This does not impact multi-lingual search.
 
   [offline]: offline.md
   [standalone Open Source project]: https://zensical.org/about/roadmap/#search-and-discovery
