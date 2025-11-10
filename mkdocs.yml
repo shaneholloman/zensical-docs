@@ -99,6 +99,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/zensical
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/hqXRNq9CjT
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/zensical/
     - icon: fontawesome/brands/bluesky
