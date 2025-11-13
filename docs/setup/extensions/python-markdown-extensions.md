@@ -419,7 +419,7 @@ line itself:
 
     ``` toml
     [project.markdown_extensions.pymdownx.highlight]
-    linenums_style: pymdownx-inline
+    linenums_style = "pymdownx-inline"
     ```
 
 === "`mkdocs.yml`"
