@@ -121,6 +121,16 @@ the `docs` directory:
 
 ## Extending the theme
 
+!!! info "Template caching"
+
+    Zensical caches theme templates for performance reasons. If you make changes to your templates or partials, you need to clear the cache in order to see your changes reflected when running the preview server:
+
+    ```
+    zensical build --clean
+    ```
+
+    This is a temporary limitation that will be fixed in a future release. Subscribe to #103 to get notified.
+
 Zensical uses [MiniJinja], a Rust-based template engine inspired by Python’s
 popular [Jinja] system, to render the HTML structure of your site – including
 the header, footer, and navigation sidebars. It rendered the entire scaffold
@@ -153,7 +163,7 @@ your template overrides:
 
     ``` yaml
     theme:
-        custom_dir: overrides
+      custom_dir: overrides
     ```
 
 The `custom_dir` path is resolved relative to your configuration file.
