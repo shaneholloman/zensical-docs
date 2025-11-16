@@ -26,7 +26,7 @@ configuration:
 === "`zensical.toml`"
 
     ``` toml
-    [project.theme]
+    [project.theme.palette]
     scheme = "default"
     ```
 
