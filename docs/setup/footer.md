@@ -136,7 +136,7 @@ configuration file:
 
     ``` toml
     [project]
-    copyright: "Copyright &copy; <year> <name>"
+    copyright = "Copyright &copy; <year> <name>"
     ```
 
 === "`mkdocs.yml`"
