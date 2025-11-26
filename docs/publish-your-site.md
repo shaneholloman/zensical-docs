@@ -55,6 +55,7 @@ jobs:
         with:
           path: site
       - uses: actions/deploy-pages@v4
+        id: deployment
 ```
 
 1.  At the moment, we do not recommend using caches on CI systems as the caching
