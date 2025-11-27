@@ -308,3 +308,18 @@ address and a port.
     ```
 
 The default `dev_addr` is `localhost:8000`.
+
+## Unsupported settings
+
+The following `mkdocs.yml` settings are not (yet) supported in Zensical, as
+we're rethinking how configuration and customization should work:
+
+- `remote_branch`
+- `remote_name`
+- `exclude_docs`
+- `draft_docs`
+- `not_in_nav`
+- `validation`
+- `strict`
+- `hooks`
+- `watch`
