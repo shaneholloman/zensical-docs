@@ -75,11 +75,20 @@ While the default repository icon is a generic git icon, it can be set to
 any icon bundled with the theme by referencing a valid icon path in
 `mkdocs.yml`:
 
-``` yaml
-theme:
-  icon:
-    repo: fontawesome/brands/git-alt
-```
+=== "`zensical.toml`"
+
+    ``` toml
+    [project.theme.icon]
+    repo = "fontawesome/brands/git-alt"
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    theme:
+      icon:
+        repo: fontawesome/brands/git-alt
+    ```
 
 You can use icons from any of the [available icon sets] or use one of these
 popular choices:
