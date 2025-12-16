@@ -121,7 +121,7 @@ the `docs` directory:
 
 #### Modules, `async`, `defer`
 
-Is you want to import code as a [JavaScript module], you can simply make sure
+If you want to import code as a [JavaScript module], you can simply make sure
 that the file has the `.mjs` extension or you can explicitly specify that it is
 to be loaded as a module:
 
