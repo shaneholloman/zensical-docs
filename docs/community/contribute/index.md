@@ -15,7 +15,7 @@ In this section, we guide you through our processes.
 
 <div class="grid cards" markdown>
 
--   :material-bug-outline: &nbsp;
+-   :lucide-bug: &nbsp;
     __Something is not working?__
 
     ---
@@ -26,7 +26,7 @@ In this section, we guide you through our processes.
 
     :octicons-arrow-right-24: [Report a bug][report a bug]
 
--   :material-file-document-remove-outline: &nbsp;
+-   :lucide-file-pen-line: &nbsp;
     __Missing information in our docs?__
 
     ---
@@ -38,7 +38,7 @@ In this section, we guide you through our processes.
 
     :octicons-arrow-right-24: [Report a docs issue][report a docs issue]
 
--   :material-lightbulb-on-20: &nbsp;
+-   :lucide-hand-platter: &nbsp;
     __Want to submit an idea?__
 
     ---
@@ -49,16 +49,16 @@ In this section, we guide you through our processes.
 
     :octicons-arrow-right-24: [Request a change][request a change]
 
--   :material-account-question-outline: &nbsp;
+-   :lucide-handshake: &nbsp;
     __Have a question or need help?__
 
     ---
 
-    Ask a question and get in touch with our growing community.
+    Join the discussion and get in touch with our growing community.
 
     ---
 
-    :octicons-arrow-right-24: [Ask a question][Discord channel]
+    :octicons-arrow-right-24: [Join the discussion][Discord channel]
 
 </div>
 

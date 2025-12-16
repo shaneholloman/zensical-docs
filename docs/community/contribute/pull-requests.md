@@ -1,7 +1,7 @@
 ---
 icon: lucide/git-pull-request-create
 ---
-# Pull Requests
+# Pull requests
 
 
 The process and requirements we describe below serve as important guardrails
@@ -40,14 +40,14 @@ styles and rules:
   [mypy]: https://www.mypy-lang.org/
   [typescript-eslint]: https://typescript-eslint.io/
 
-In addition, we use an [editorconfig] file that configures compatible editors to
+In addition, we use an [.editorconfig] file that configures compatible editors to
 behave the same way for tasks like removing trailing whitespace or applying
 indentation styles. Please check if your editor honors editorconfig settings [by
 default] or [requires a plugin]. If you also add plugins for the style checkers
 and linters then this should help to make sure that the diffs in your commits
 are minimal and focused on the intended changes.
 
-  [editorconfig]: https://editorconfig.org/
+  [.editorconfig]: https://editorconfig.org/
   [by default]: https://editorconfig.org/#pre-installed
   [requires a plugin]: https://editorconfig.org/#download
 
@@ -77,12 +77,13 @@ git commit –s -m "
 [issue number]
 ```
 
-If your commit contains co-authors denoted by the `Co-authored-by` trailer, by
-signing off you confirm that you have obtained confirmation and consent from each
-co-author that their contribution complies with the Developer Certificate of
-Origin (DCO), and that you are authorized to submit it on their behalf.
+If your commit contains co-authors denoted by the `Co-authored-by` trailer, you
+confirm that, by signing off, you have obtained confirmation and consent from
+each co-author that their contribution complies with the Developer Certificate
+of Origin (DCO), and that you are authorized to submit the contribution on their
+behalf.
 
-## Use of AI
+## Use of Generative AI
 
 AI-assisted coding can be useful but the unreflected inclusion of AI-generated
 code can also do great harm. By signing off on commits, you attest that you have
@@ -96,9 +97,10 @@ maintaining it in the future.
 
 ## Commit message standards
 
-We follow the [Conventional Commits] specification, except that our tooling
-automatically calculates the scope of changes. This helps us automate our
-release notes and versioning. Each commit message must follow this structure:
+We follow the [Conventional Commits] specification, with automatically computed
+scopes for changes derived from the structure of the project or from
+configuration. This helps us automate our release notes and versioning. Each
+commit message must follow this structure:
 
   [Conventional Commits]: https://www.conventionalcommits.org/
 
@@ -125,23 +127,29 @@ types we support are listed in the table below. The CI job checks that:
 
   [changelog]: https://github.com/zensical/zensical/releases
 
-* An accepted commit type is used.
+* An accepted commit type is used, e.g. `fix` or `feature`.
 * The commit summary does not contain additional whitespace: preceding, trailing,
   between type and colon, or double whitespace between the colon and the commit
   summary.
 * The commit summary starts with lowercase and does not end with punctuation (it
-  is not a full sentence).
-* The commit summary must not contain an issue reference. The issue reference
-  belongs in the body instead.
+  is not a full sentence), as recommended by the Conventional Commits
+  specification.
+* The commit summary does not contain an issue reference. The issue reference
+  should always go into the body, and will be automatically extracted.
+
+<figure markdown>
 
 | Type          | Description                                     |
 | :------------ | :---------------------------------------------- |
-| `feature`     | Implements a new feature.                       |
-| `fix`         | Fixes a bug.                                    |
-| `performance` | Improves performance.                           |
-| `refactor`    | Improves code without changing behavior.        |
-| `build`       | Makes changes to the build or CI system.        |
-| `docs`        | Adds or improves documentation.                 |
-| `style`       | Makes stylistic changes only (e.g. whitespcae)  |
-| `test`        | Adds or improves tests.                         |
+| `feature`     | Implements a new feature                        |
+| `fix`         | Fixes a bug                                     |
+| `performance` | Improves performance                            |
+| `refactor`    | Improves code without changing behavior         |
+| `build`       | Makes changes to the build or CI system         |
+| `docs`        | Adds or improves documentation                  |
+| `style`       | Makes stylistic changes only (e.g. whitespace)  |
+| `test`        | Adds or improves tests                          |
 | `chore`       | Updates build process, prepares releases, etc.  |
+
+  <figcaption>Accepted commit types</figcaption>
+</figure>
