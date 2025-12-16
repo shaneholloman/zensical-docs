@@ -50,7 +50,7 @@ are minimal and focused on the intended changes.
   
 ## Verified commits
 
-To ensure the integrity of our projects, we require [verified commits] that are  cryptographically signed. For this to work, you need to install the _public_ key of a keypair into your GitHub account. Follw the instructions on GitHub for using [gpg], [ssh], [s/mime] keypairs.
+To ensure the integrity of our projects, we require [verified commits] that are  cryptographically signed. For this to work, you need to install the _public_ key of a keypair into your GitHub account. Follow the instructions on GitHub for using [gpg], [ssh], [s/mime] keypairs.
 
   [verified commits]: https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification
   [gpg]: https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#gpg-commit-signature-verification
@@ -64,26 +64,20 @@ _sign off_ on their commits, thus accepting the Developer Certificate of Origin.
 This certifies that you have the right to submit the code under the project's
 license.
 
-You must add a Signed-off-by line to every commit message. You can do this
-automatically by adding the `--signoff` flag to the commit command:
+You must add a `Signed-off-by` line to every commit message, which git will
+automatically do for you when you provide the `-s` command line flag:
 
 ```
-git commit –signoff -m "
+git commit –s -m "
 <type>: <summary description>
 
 [issue number]
 ```
 
-At the moment, you need to use your GitHub username. To configure this for the
-repository you are working on:
-
-```
-git config user.name "Your GitHub username here"
-git config user.email your@email.example
-```
-
-**email also necessary? Just when will these requirements change? **
-
+If your commit contains co-authors denoted by the `Co-authored-by` trailer, by
+signing off you confirm that you have obtained confirmation and consent from each
+co-author that their contribution complies with the Developer Certificate of
+Origin (DCO), and that you are authorized to submit it on their behalf.
 
 ## Use of AI
 
@@ -97,12 +91,11 @@ fully explain to us will be rejected. We must ensure, after all, that the
 contribution does not contain bugs or malicious code, and that we can commit to
 maintaining it in the future.
 
-## Commit Message Standards
+## Commit message standards
 
 We follow the [Conventional Commits] specification, except that our tooling
-automatically calculates the scope of changes, so a scope is not permitted. This
-helps us automate our release notes and versioning. Each commit message must
-follow this structure:
+automatically calculates the scope of changes. This helps us automate our
+release notes and versioning. Each commit message must follow this structure:
 
   [Conventional Commits]: https://www.conventionalcommits.org/
 
@@ -111,7 +104,7 @@ follow this structure:
 
 [issue number]
 
-[sign-off]
+Signed-off-by: ...
 ```
 
 Note that we require PRs to be [linked to an issue] that has been discussed with
@@ -122,7 +115,7 @@ of Origin].
   [require sign-off]: #developer-certificate-of-origin  
   [Developer Certificate of Origin]: https://developercertificate.org
 
-Please note that commit messages of commits accepted into the master branch are
+Please note that summaries of commits accepted into the master branch are
 published in our [changelog] when we release new versions. To ensure consistent
 formatting, we automatically check commit messages in our CI setup. The commit
 types we support are listed in the table below. The CI job checks that:
@@ -130,13 +123,13 @@ types we support are listed in the table below. The CI job checks that:
   [changelog]: https://github.com/zensical/zensical/releases
 
 * An accepted commit type is used.
-* The summary line does not contain additional whitespace: preceding, trailing,
+* The commit summary does not contain additional whitespace: preceding, trailing,
   between type and colon, or double whitespace between the colon and the commit
   summary.
 * The commit summary starts with lowercase and does not end with punctuation (it
   is not a full sentence).
 * The commit summary must not contain an issue reference. The issue reference
-  belongs in the box instead.
+  belongs in the body instead.
 
 | Type          | Description                                     |
 | :------------ | :---------------------------------------------- |
@@ -144,8 +137,8 @@ types we support are listed in the table below. The CI job checks that:
 | `fix`         | Fixes a bug.                                    |
 | `performance` | Improves performance.                           |
 | `refactor`    | Improves code without changing behavior.        |
-| `build`       |                                                 |
+| `build`       | Makes changes to the build or CI system.        |
 | `docs`        | Adds or improves documentation.                 |
-| `style`       |                                                 |
+| `style`       | Makes stylistic changes only (e.g. whitespcae)  |
 | `test`        | Adds or improves tests.                         |
-| chore         | Updates build process, prepares releases, etc.  |
+| `chore`       | Updates build process, prepares releases, etc.  |
