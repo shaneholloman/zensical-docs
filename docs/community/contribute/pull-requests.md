@@ -75,6 +75,7 @@ git commit –s -m "
 <type>: <summary description>
 
 [issue number]
+"
 ```
 
 If your commit contains co-authors denoted by the `Co-authored-by` trailer, you
