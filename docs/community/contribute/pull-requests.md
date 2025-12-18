@@ -72,9 +72,7 @@ automatically do for you when you provide the `-s` command line flag:
 
 ```
 git commit –s -m "
-<type>: <summary description>
-
-[issue number]
+<type>: <summary description> (#<issue number>)
 "
 ```
 
@@ -106,9 +104,7 @@ commit message must follow this structure:
   [Conventional Commits]: https://www.conventionalcommits.org/
 
 ```
-<type>: <summary description>
-
-[issue number]
+<type>: <summary description> (#<issue number>)
 
 Signed-off-by: ...
 ```
