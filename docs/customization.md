@@ -534,5 +534,5 @@ configuration:
 [template]: authoring/frontmatter.md#page-template
 [template language provided by MiniJinja]: https://docs.rs/minijinja/latest/minijinja/syntax/index.html
 [template option]: authoring/frontmatter.md#page-template
-[theme templates]: https://github.com/zensical/ui/tree/master/dist
 [theme structure]: #theme-structure
+[theme templates]: https://github.com/zensical/ui/tree/master/dist
