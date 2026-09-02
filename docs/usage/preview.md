@@ -31,11 +31,11 @@ will automatically reload the page you're on.
 
 The `serve` command accepts the following options:
 
-| Option                     | Short | Description                                   |
-| -------------------------- | ----- | --------------------------------------------- |
-| --config-file              | -f    | Path to the config file to use.               |
-| --open                     | -o    | Open preview in default browser               |
-| --dev-addr &lt;IP:PORT&gt; | -a    | IP address and port (default: localhost:8000) |
-| --help                     |       | Show a help message and exit.                 |
+| Option                    | Short | Description                                   |
+| ------------------------- | ----- | --------------------------------------------- |
+| `--config-file`           | `-f`  | Path to the config file to use.               |
+| `--open`                  | `-o`  | Open preview in default browser               |
+| `--dev-addr <IP:PORT>`    | `-a`  | IP address and port (default: localhost:8000) |
+| `--help`                  |       | Show a help message and exit.                 |
 
 [live preview]: http://localhost:8000
