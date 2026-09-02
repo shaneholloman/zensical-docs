@@ -13,12 +13,6 @@ icon: lucide/message-circle-question-mark
     [hello@zensical.org](mailto:hello@zensical.org) or post the question on
     the [quick-thoughts] channel on Discord.
 
-## Troubleshooting
-
-If you ever encounter any problems with Zensical, especially after upgrading to
-a new version, you may want to use the `--clean` option to clear the build cache
-before looking elsewhere.
-
 ## Compatibility and transition
 
 ### Can I use Zensical in production since it is a 0.0.x release?
