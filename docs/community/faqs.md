@@ -58,21 +58,6 @@ author variants of the Zensical theme. This will make it easier for you to build
 new theme variants and use them for your projects or share them with the
 community.
 
-### Will you support symbolic links?
-
-At the moment, Zensical follows symbolic links only within directories that are
-already part of a build. This restriction serves to prevent security issues such
-as information disclosure or denial of service attacks. The semantics of
-symlinks are also operating-system dependent and may be different if networked
-file storage is being used. In addition, support for symbolic links would need
-to deal with issues such as detecting cycles.
-
-Therefore, we will only consider implementing support for symbolic links after
-careful review of the use cases, consideration of alternatives, and review of the
-possible implications of implementations.
-Zensical will always be secure by default but we are considering configuration
-options that will allow you to opt in to support for symbolic links.
-
 ## Zensical Spark, business model, and licensing
 
 ### Do I need to pay for extra features in Zensical?
