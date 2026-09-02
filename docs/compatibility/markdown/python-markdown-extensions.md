@@ -830,15 +830,6 @@ See this authoring guide for usage:
 
 - [Using task lists]
 
-## Other extensions
-
-Did not find what you are looking for? The Markdown extensions listed above are
-those that we officially support. You can use other extensions and they should
-work but we are not advertising their use as we believe there are better
-alternatives. The `critic` extension, for example, is quite difficult to use in
-projects of any significant size and we would advise users to work with Git
-to track changes instead.
-
 [^1]: Other libraries like [KaTeX] are also supported and can be integrated with some additional effort. See the [Arithmatex documentation on KaTeX] for further guidance, as this is beyond the scope of Zensical.
 
 [Adding a glossary]: ../../authoring/tooltips.md#add-a-glossary
