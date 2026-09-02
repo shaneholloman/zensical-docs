@@ -8,26 +8,38 @@ tags:
 # Tags
 
 Zensical adds first-class support for categorizing pages with tags, which allows
-users to discover related pages via the [search]. If your documentation is
-large, tags can help to discover relevant information faster.
+users to discover related pages via [search]. If your documentation is large,
+tags can help users find relevant information faster.
 
 ## Configuration
 
-The built-in tags functionality lets you categorize any page with tags
-as part of the [metadata] of the page. Tags are supported by default, no
-configuration needed.
+Zensical provides a native implementation of the `tags` plugin, adapted from
+the configuration and behavior of the Material for MkDocs [tags plugin]. Enable
+it in your configuration:
 
-!!! info "Tag listings are currently not supported"
+=== "`zensical.toml`"
 
-    As we are working towards [feature parity] with Material for MkDocs, we
-    will be adding features such as tag indexes that are implemented as part of
-    the tags plugin in Material for MkDocs.
+    ``` toml
+    [project.plugins.tags]
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    plugins:
+      - tags
+    ```
+
+The implementation supports the existing plugin configuration, including tag
+listings and advanced tag settings. Refer to the original [plugin documentation]
+for all available options and listing syntax, and check the [compatibility
+entry] for Zensical-specific information.
 
 ### Tag icons and identifiers
 
 Each tag can be associated with an icon, which is rendered inside the tag.
-Before assigning icons to tags, associate each tag with a unique identifier,
-by adding the following to your configuration:
+Before assigning icons to tags, associate each tag with a unique identifier by
+adding the following to your configuration:
 
 === "`zensical.toml`"
 
@@ -44,9 +56,9 @@ by adding the following to your configuration:
         <tag>: <identifier>
     ```
 
-The identifier can only include alphanumeric characters, as well as dashes
-and underscores. For example, if you have a tag `Compatibility`, you can
-set `compat` as an identifier:
+The identifier can only include alphanumeric characters, as well as dashes and
+underscores. For example, if you have a tag `Compatibility`, you can set
+`compat` as an identifier:
 
 === "`zensical.toml`"
 
@@ -67,9 +79,8 @@ Identifiers can be reused between tags to assign groups of tags the same icon.
 Tags that are not explicitly associated with an identifier will use the default
 tag icon.
 
-Next, each identifier can be associated with an icon, even a [custom icon], by
-adding the following lines to you configuration under the `theme.icon` configuration
-setting:
+Next, each identifier can be associated with an icon, including a [custom icon],
+under the `theme.icon` configuration setting:
 
 === "`zensical.toml`"
 
@@ -103,7 +114,7 @@ setting:
         [project.extra.tags]
         HTML5 = "html"
         JavaScript = "js"
-        CSS = "cs"
+        CSS = "css"
         ```
 
     === "`mkdocs.yml`"
@@ -115,7 +126,7 @@ setting:
               default: lucide/hash
               html: fontawesome/brands/html5
               js: fontawesome/brands/js
-              css:  fontawesome/brands/css3
+              css: fontawesome/brands/css3
         extra:
           tags:
             HTML5: html
@@ -127,7 +138,7 @@ setting:
 
 ### Add tags
 
-Tags can be added for a document with the front matter `tags` property. They can
+Tags can be added to a document with the front matter `tags` property. They can
 also be used in search without any further configuration. Add the following
 lines at the top of a Markdown file:
 
@@ -143,14 +154,13 @@ tags:
 ...
 ```
 
-The page will now render with those tags at the bottom of the page and your
-users will be able to filter by these tags in the search.
+The page will now render with those tags at the bottom, and users will be able
+to filter by them in search.
 
 ### Hide tags on a page
 
-While the tags are rendered at the bottom of each page, sometimes, it might be
-desirable to hide them for a specific page, which can be achieved with the
-front matter `hide` property:
+While tags are rendered at the bottom of each page, you can hide them for a
+specific page with the front matter `hide` property:
 
 ``` yaml
 ---
@@ -162,7 +172,8 @@ hide:
 ...
 ```
 
+[compatibility entry]: ../compatibility/mkdocs/plugins.md#tags
 [custom icon]: logo-and-icons.md#additional-icons
-[feature parity]: https://zensical.org/compatibility/features
-[metadata]: ../authoring/frontmatter.md
+[plugin documentation]: https://squidfunk.github.io/mkdocs-material/plugins/tags/
 [search]: search.md
+[tags plugin]: https://squidfunk.github.io/mkdocs-material/plugins/tags/
