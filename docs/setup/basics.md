@@ -259,6 +259,13 @@ configuration:
   options of the [Macros] extension (`zensical.extensions.macros`)
 - Files from the `paths` option of the [mkdocstrings] compatibility extension
 
+!!! warning "Symbolic links"
+
+    Zensical follows symbolic links only when their targets are inside a watched
+    directory. This prevents a project from accessing files outside the paths it
+    is configured to monitor. To use a target elsewhere, add its containing
+    directory to `watch`. Support for [targets outside watched directories] is tracked in our backlog.
+
 === "`zensical.toml`"
 
     ``` toml
@@ -289,3 +296,5 @@ configuration:
 [offline usage]: offline.md
 [preview]: ../usage/preview.md
 [Snippets]: ../compatibility/markdown/python-markdown-extensions.md#snippets
+[symbolic link for `site_dir`]: https://github.com/zensical/backlog/issues/71
+[targets outside watched directories]: https://github.com/zensical/backlog/issues/55
