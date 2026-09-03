@@ -27,8 +27,7 @@ plugins:
       minify_html: true
 ```
 
-If your project already uses `zensical.toml`, the same option names are placed
-under the matching plugin table:
+If your project already uses `zensical.toml`:
 
 ``` toml
 [project.plugins.tags]
@@ -37,10 +36,13 @@ under the matching plugin table:
 minify_html = true
 ```
 
-We recommend consulting the original plugin documentation for its options, then
-checking the entries below for Zensical-specific differences. We're working on
-shipping a growing list of supported plugins, as well as Zensical's own native
-public module API.
+The original documentation for each plugin (linked below) remains the reference for usage and
+configuration. We're working on shipping a growing list of supported plugins,
+as well as Zensical's own native public module API.
+
+If you're lazy like us, use [Zensical Studio] to get completions and validation
+for all supported plugins directly in your editor inside `zensical.toml` and
+`mkdocs.yml` configuration files.
 
 ## Supported plugins
 
@@ -237,3 +239,4 @@ without using their original codebases.
 [search]: https://www.mkdocs.org/user-guide/configuration/#search
 [table-reader]: https://timvink.github.io/mkdocs-table-reader-plugin/
 [tags]: https://squidfunk.github.io/mkdocs-material/plugins/tags/
+[Zensical Studio]: https://zensical.org/studio/
